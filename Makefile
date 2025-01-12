@@ -1,9 +1,17 @@
-all: README.md
+# Makefile for the Guessing Game project
 
 README.md: guessinggame.sh
-	echo "# Guessing Game" > README.md
-	echo "\nDate and Time of make: $$(date)" >> README.md
-	echo "\nNumber of lines in guessinggame.sh: $$(wc -l < guessinggame.sh)" >> README.md
+	echo "# Guessing Game Project" > README.md
+	echo " " >> README.md
+	echo "## Date and Time of Run" >> README.md
+	echo "\`\`\`" >> README.md
+	date >> README.md
+	echo "\`\`\`" >> README.md
+	echo " " >> README.md
+	echo "## Number of Lines in guessinggame.sh" >> README.md
+	echo "\`\`\`" >> README.md
+	wc -l < guessinggame.sh >> README.md
+	echo "\`\`\`" >> README.md
 
 clean:
-	rm README.md
+	rm -f README.md
